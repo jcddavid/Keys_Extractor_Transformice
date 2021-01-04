@@ -81,7 +81,7 @@ class Parser:
                 elif 'getlocal_0' in dump[line - 2]:
                     value = self.functions[search('<q>\[public\]::(.*?), 0 params', dump[line - 3])[1]]
 
-                if value:
+                if value != None:
                     operators.append(value)
             i += 1
 
